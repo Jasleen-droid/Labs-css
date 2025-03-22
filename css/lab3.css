@@ -1,0 +1,62 @@
+@charset "utf-8"; /* Defines character */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap'); 
+
+html {
+    box-sizing: border-box;    /* Ensures padding and border are included in element's total width and height */
+    font-family: "Roboto", sans-serif;  /* Sets the font to Roboto*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+#container {
+    width: 80%;  /* this is container width is 80% of the parent element */
+    margin: 0 auto;
+}
+
+.tabs {
+    margin-top: 20px;         /* 20px space above the tabs */
+}
+
+ul[role="tablist"] {
+    list-style: none;
+    padding: 0;  /* Removes default padding */
+    display: flex;
+    border-bottom: 2px solid #ccc;     /* Adds a 2px solid border at the bottom of the tab list */
+}
+
+ul[role="tablist"] li {
+    margin: 0;      /* Removes margin around each list item */
+}
+
+ul[role="tablist"] li a {
+    display: block;
+    padding: 10px 20px; /* Adds 10px padding vertically and 20px horizontally */
+    text-decoration: none;
+    color: #333; /* Sets the text color to a dark grey */
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 5px 5px 0 0; 
+}
+
+ul[role="tablist"] li a:hover,
+ul[role="tablist"] li a.active {
+    background: #808080;  /* Grey highlight */
+    color: #fff;          /* White text for contrast */
+    border: 1px solid #808080; /* Grey border */
+}
+
+
+[role="tabpanel"] {
+    display: none;  /* Hides the tab panel by default */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #f9f9f9;    
+}
+
+[role="tabpanel"].active {
+    display: block; /*display active tab pannel */
+}
+
+/* Resources used to complete this assignment: Code with harry Youtube channel */
